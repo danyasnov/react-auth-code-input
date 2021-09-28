@@ -4,7 +4,7 @@ type Props = {
   characters?: number;
   allowedCharacters?: RegExp;
   onChange: (res: string) => void;
-  password?: boolean;
+  inputType?: string;
   /**
    * @deprecated Since version 1.2.0 Will be deleted in version 2.0. Use inputClassName instead.
    */
@@ -21,7 +21,7 @@ const AuthCode: React.FC<Props> = ({
   characters = 6,
   allowedCharacters = '^[A-Za-z0-9]*$',
   onChange,
-  password,
+  inputType,
   inputStyle,
   containerStyle,
   inputClassName,
@@ -92,7 +92,7 @@ const AuthCode: React.FC<Props> = ({
         onKeyDown={handleOnKeyDown}
         onFocus={handleOnFocus}
         onPaste={handleOnPaste}
-        type={password ? 'password' : 'text'}
+        type={inputType || 'text'}
         ref={(el: HTMLInputElement) => (inputsRef.current[i] = el)}
         maxLength={1}
         className={inputClassName}

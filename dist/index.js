@@ -9,7 +9,7 @@ var AuthCode = function AuthCode(_ref) {
       _ref$allowedCharacter = _ref.allowedCharacters,
       allowedCharacters = _ref$allowedCharacter === void 0 ? '^[A-Za-z0-9]*$' : _ref$allowedCharacter,
       onChange = _ref.onChange,
-      password = _ref.password,
+      inputType = _ref.inputType,
       inputStyle = _ref.inputStyle,
       containerStyle = _ref.containerStyle,
       inputClassName = _ref.inputClassName,
@@ -87,7 +87,7 @@ var AuthCode = function AuthCode(_ref) {
       onKeyDown: handleOnKeyDown,
       onFocus: handleOnFocus,
       onPaste: handleOnPaste,
-      type: password ? 'password' : 'text',
+      type: inputType || 'text',
       ref: function ref(el) {
         return inputsRef.current[i] = el;
       },
