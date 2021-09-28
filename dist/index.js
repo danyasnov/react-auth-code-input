@@ -93,7 +93,8 @@ var AuthCode = function AuthCode(_ref) {
       },
       maxLength: 1,
       className: inputClassName,
-      style: inputStyle
+      style: inputStyle,
+      inputMode: 'numeric'
     }));
   };
 
