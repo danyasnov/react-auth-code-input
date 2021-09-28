@@ -97,6 +97,7 @@ const AuthCode: React.FC<Props> = ({
         maxLength={1}
         className={inputClassName}
         style={inputStyle}
+        inputMode='numeric'
       />
     );
   }
